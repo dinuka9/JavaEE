@@ -1,0 +1,34 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="
+   http://www.springframework.org/schema/beans     
+   http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+   http://www.springframework.org/schema/context 
+   http://www.springframework.org/schema/context/spring-context-3.0.xsd">
+
+	<!-- this scans all the files in the base-package that has @Controller annotation -->
+
+	<context:component-scan base-package="lk.dinuka.SpringMVC" />
+
+	<bean
+		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+		<property name="prefix" value="/WEB-INF/views/" />
+		<property name="suffix" value=".jsp" />
+	</bean>
+	<!-- this will return a view prefix + returnVlaueOfTheMethod + suffix -->
+	<!-- ex : -->
+	<!-- if the return value is budget -->
+	<!-- this will return /WEB-INF/views/budget.jsp -->
+
+
+	<bean id="dataSource"
+		class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+		<property name="driverClassName" value="com.mysql.jdbc.Driver"></property>
+		<property name="url" value="jdbc:mysql://localhost/springmvc"></property>
+		<property name="username" value="root"></property>
+		<property name="password" value="0711646136"></property>
+	</bean>
+
+
+</beans>
