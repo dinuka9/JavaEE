@@ -1,6 +1,6 @@
 # JavaEE
 
-JavaEE sample projects <br>
+JavaEE sample projects <br> <br>
 SpringHibernate -> spring + hibernate comnined application <br>
 spring-only -> webapp using spring framework <br>
 hibernate-pro-annotation -> hibernate sample project with annotation configuration <br>
